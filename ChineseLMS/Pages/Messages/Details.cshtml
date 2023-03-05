@@ -1,0 +1,70 @@
+@page
+@model ChineseLMS.Pages.Messages.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="row">
+    <div class="col-4">
+        <div>
+            <partial name="~/Pages/Dashboard/_OptionsList_Messages.cshtml" />
+        </div>
+        @*<div>
+            <partial name="~/Pages/Dashboard/_ClassList.cshtml" />
+        </div>*@
+    </div>
+    <div class="col-8">
+        <div class="list-group">
+            <div class="list-group-item shadow bg-white rounded">
+                <div class="row pl-1 mb-0 px-3">
+                    <div class="col-8 px-0">
+                        <a class="text-decoration-none" asp-page="./Index" style="color:#0078cd;"><strong>⬅️ Back to Discussions</strong></a>
+                    </div>
+                    <div class="col-4 text-end">
+                        <a class="text-decoration-none danger" asp-page="./Delete" asp-route-id="@Model.CourseMessage?.CourseMessageID"><strong>Delete ❌</strong></a>
+                        <a class="text-decoration-none" asp-page="./Edit" asp-route-id="@Model.CourseMessage?.CourseMessageID"><strong>Edit ✍🏻</strong></a>
+                    </div>
+                </div>
+                <div class="list-group h-100 px-2 py-3">
+                    @*Header*@
+                    <div class="list-group-item shadow pl-3 mb-3 bg-white rounded">
+                        <div class="row">
+                            <div class="col-8 font-weight-bold">
+                                <h3>
+                                    <strong>
+                                        @Html.DisplayFor(model => model.CourseMessage.CourseID) @Html.DisplayFor(model => model.CourseMessage.MessageTitle)
+                                    </strong>
+                                </h3>
+                            </div>
+                            <div class="col-4 text-end">
+                                <h3 style="color:#07ae35;">
+                                    <strong>
+                                        Edited:
+                                        <br/>
+                                        @Html.DisplayFor(model => model.CourseMessage.MessageEditDate)
+                                    </strong>
+                                    <br />
+                                    <strong>
+                                        Created:
+                                        <br/>
+                                        @Html.DisplayFor(model => model.CourseMessage.MessageCreateDate)
+                                    </strong>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    @*Details*@
+                    <div class="list-group-item shadow pl-3 mb-3 bg-white rounded h-100">
+                        <div class="row">
+                            <div class="col-8 font-weight-bold">
+                                <h5><strong>Task Details</strong></h5>
+                                <br />
+                                @Html.Raw(Model.CourseMessage.MessageContent)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

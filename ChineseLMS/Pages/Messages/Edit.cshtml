@@ -1,0 +1,112 @@
+@page
+@model ChineseLMS.Pages.Messages.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="row">
+    <div class="col-4">
+        <div>
+            <partial name="~/Pages/Dashboard/_OptionsList_Messages.cshtml" />
+        </div>
+        <div>
+            <partial name="~/Pages/Dashboard/_ClassList.cshtml" />
+        </div>
+    </div>
+    <div class="col-8">
+        <div class="list-group vh-100">
+            <div class="h-100 list-group-item shadow bg-white rounded">
+                <form method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="CourseMessage.CourseMessageID" />
+                    <div class="row pl-1 mb-0 px-3">
+                        <div class="col-8 px-0">
+                            <a class="text-decoration-none" asp-page="./Index" style="color:#0078cd;"><strong>⬅️ Back to Discussions</strong></a>
+                        </div>
+                        <div class="col-4 text-end">
+                            <input type="submit" value="Finish Editing ✍🏻" class="text-decoration-none border-0 bg-white font-weight-bold" style="color:#0078cd"></input>
+
+                        </div>
+                    </div>
+                    <div class="list-group h-100 px-2 py-3">
+                        @*Header*@
+                        <div class="list-group-item shadow pl-3 mb-3 bg-white rounded">
+                            <div class="row pl-0 mb-1 px-0">
+                                <div class="col-8 font-weight-bold">
+                                    <div class="form-group">
+                                        <h3>
+                                            <strong>
+                                                <label asp-for="CourseMessage.CourseID" class="control-label"></label>
+                                            </strong>
+                                        </h3>
+                                        <select asp-for="CourseMessage.CourseID" class="form-control" asp-items="ViewBag.CourseID"></select>
+                                        <span asp-validation-for="CourseMessage.CourseID" class="text-danger"></span>
+                                        <h3>
+                                            <strong>
+                                                <label asp-for="CourseMessage.InstructorID" class="control-label"></label>
+                                            </strong>
+                                        </h3>
+                                        <select asp-for="CourseMessage.InstructorID" class="form-control" asp-items="ViewBag.InstructorID"></select>
+                                        <span asp-validation-for="CourseMessage.InstructorID" class="text-danger"></span>
+                                        <h3>
+                                            <strong>
+                                                <label asp-for="CourseMessage.MessageTitle" class="control-label"></label>
+                                            </strong>
+                                        </h3>
+                                        <input asp-for="CourseMessage.MessageTitle" class="form-control" />
+                                        <span asp-validation-for="CourseMessage.MessageTitle" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        @*Details*@
+                        <div class="list-group-item shadow pl-3 mb-3 bg-white rounded h-50">
+                            <div class="row">
+                                <div class="col-12 font-weight-bold">
+                                    <h5><strong>Task Details</strong></h5>
+                                    <br />
+                                    <textarea asp-for="CourseMessage.MessageContent" class="form-control"></textarea>
+                                    <span asp-validation-for="CourseMessage.MessageContent" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        @*Dropbox*@
+                        <div class="list-group-item shadow pl-3 mb-3 bg-white rounded h-25">
+                            <div class="row">
+                                <div class="col-8 font-weight-bold">
+                                    <h5><strong>Dropbox</strong></h5>
+                                    <br />
+                                    <div class="mb-3">
+                                        <label for="formFile" class="form-label">
+                                            Default file input example
+                                        </label>
+                                        <input class="form-control" type="file" id="formFile">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        @section Scripts {
+            @*Add HTML Scripts*@
+            @*For TinyMCE*@
+            <script src="https://cdn.tiny.cloud/1/efpq6i5ajrlj903xs6dxfgipoqrso7jzu8p59ctoo4w2g7mu/tinymce/5/tinymce.min.js"
+                    referrerpolicy="origin"></script>
+            <script>tinymce.init({
+                    selector: "textarea"
+                });</script>
+
+            <script>$(document).ready(function () {
+
+                })</script>
+
+            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        }
+    </div>
+</div>
+

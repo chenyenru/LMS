@@ -1,0 +1,315 @@
+:root {
+  --dl-color-gray-500: #595959;
+  --dl-color-gray-700: #999999;
+  --dl-color-gray-900: #D9D9D9;
+  --dl-size-size-large: 144px;
+  --dl-size-size-small: 48px;
+  --dl-color-danger-300: #A22020;
+  --dl-color-danger-500: #BF2626;
+  --dl-color-danger-700: #E14747;
+  --dl-color-gray-black: #000000;
+  --dl-color-gray-white: #FFFFFF;
+  --dl-size-size-medium: 96px;
+  --dl-size-size-xlarge: 192px;
+  --dl-size-size-xsmall: 16px;
+  --dl-space-space-unit: 16px;
+  --dl-color-primary-100: rgba(0, 23, 31, 1);
+  --dl-color-primary-300: #0074F0;
+  --dl-color-primary-500: #14A9FF;
+  --dl-color-primary-700: #85DCFF;
+  --dl-color-success-300: #199033;
+  --dl-color-success-500: #32A94C;
+  --dl-color-success-700: #4CC366;
+  --dl-size-size-xxlarge: 288px;
+  --dl-size-size-maxwidth: 1400px;
+  --dl-radius-radius-round: 50%;
+  --dl-color-default-linear: rgba(251, 238, 212, 1);
+  --dl-space-space-halfunit: 8px;
+  --dl-space-space-sixunits: 96px;
+  --dl-space-space-twounits: 32px;
+  --dl-color-neutralcolor-00: rgba(252, 252, 252, 1);
+  --dl-color-neutralcolor-10: rgba(235, 237, 239, 1);
+  --dl-color-neutralcolor-20: rgba(204, 209, 210, 1);
+  --dl-color-neutralcolor-40: rgba(153, 162, 165, 1);
+  --dl-color-neutralcolor-60: rgba(102, 116, 121, 1);
+  --dl-color-neutralcolor-80: rgba(36, 42, 51, 1);
+  --dl-radius-radius-radius2: 2px;
+  --dl-radius-radius-radius4: 4px;
+  --dl-radius-radius-radius8: 8px;
+  --dl-space-space-fiveunits: 80px;
+  --dl-space-space-fourunits: 64px;
+  --dl-space-space-threeunits: 48px;
+  --dl-color-statecolor-bluesea: rgba(0, 166, 230, 1);
+  --dl-color-statecolor-pinkred: rgba(255, 86, 79, 1);
+  --dl-color-primarycolor-darkblue: rgba(0, 52, 89, 1);
+  --dl-color-statecolor-greenlight: rgba(52, 199, 89, 1);
+  --dl-space-space-oneandhalfunits: 24px;
+  --dl-color-statecolor-orangeshine: rgba(255, 145, 43, 1);
+  --dl-color-primarycolor-darkblue40: rgba(0, 119, 205, 1);
+  --dl-color-primarycolor-darkblue60: rgba(0, 81, 140, 1);
+  --dl-color-primarycolor-darkblue80: rgba(0, 42, 72, 1);
+  --dl-color-secondarycolor-monyellow: rgba(247, 219, 167, 1);
+  --dl-color-secondarycolor-monyellow40: rgba(251, 238, 212, 1);
+  --dl-color-secondarycolor-monyellow60: rgba(241, 207, 145, 1);
+  --dl-color-secondarycolor-monyellow80: rgba(238, 198, 125, 1);
+}
+.button {
+  color: var(--dl-color-gray-black);
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-color: var(--dl-color-gray-black);
+  border-width: 1px;
+  border-radius: 4px;
+  background-color: var(--dl-color-gray-white);
+}
+.input {
+  color: var(--dl-color-gray-black);
+  cursor: auto;
+  padding: 0.5rem 1rem;
+  border-color: var(--dl-color-gray-black);
+  border-width: 1px;
+  border-radius: 4px;
+  background-color: var(--dl-color-gray-white);
+}
+.textarea {
+  color: var(--dl-color-gray-black);
+  cursor: auto;
+  padding: 0.5rem;
+  border-color: var(--dl-color-gray-black);
+  border-width: 1px;
+  border-radius: 4px;
+  background-color: var(--dl-color-gray-white);
+}
+.list {
+  width: 100%;
+  margin: 1em 0px 1em 0px;
+  display: block;
+  padding: 0px 0px 0px 1.5rem;
+  list-style-type: none;
+  list-style-position: outside;
+}
+.list-item {
+  display: list-item;
+}
+.teleport-show {
+  display: flex !important;
+}
+.heading46pxBold {
+  font-size: 46px;
+  font-style: normal;
+  font-family: Merriweather;
+  font-weight: 700px;
+  font-stretch: normal;
+}
+.heading46pxMedium {
+  font-size: 46px;
+  font-style: normal;
+  font-family: Merriweather;
+  font-weight: 900px;
+  font-stretch: normal;
+}
+.heading46pxRegular {
+  font-size: 46px;
+  font-style: normal;
+  font-family: Merriweather;
+  font-weight: 400px;
+  font-stretch: normal;
+}
+.heading36pxBold {
+  font-size: 36px;
+  font-style: normal;
+  font-family: Merriweather;
+  font-weight: 700px;
+  font-stretch: normal;
+}
+.heading36pxSemiBold {
+  font-size: 36px;
+  font-style: normal;
+  font-family: Merriweather;
+  font-weight: 900px;
+  font-stretch: normal;
+}
+.heading36pxRegular {
+  font-size: 36px;
+  font-style: normal;
+  font-family: Merriweather;
+  font-weight: 400px;
+  font-stretch: normal;
+}
+.heading28pxBold {
+  font-size: 28px;
+  font-style: normal;
+  font-family: Merriweather;
+  font-weight: 700px;
+  font-stretch: normal;
+}
+.heading28pxMedium {
+  font-size: 28px;
+  font-style: normal;
+  font-family: Merriweather;
+  font-weight: 900px;
+  font-stretch: normal;
+}
+.heading28pxRegular {
+  font-size: 28px;
+  font-style: normal;
+  font-family: Merriweather;
+  font-weight: 400px;
+  font-stretch: normal;
+}
+.heading24pxBold {
+  font-size: 24px;
+  font-style: normal;
+  font-family: Merriweather;
+  font-weight: 700px;
+  font-stretch: normal;
+}
+.heading24pxSemiBold {
+  font-size: 24px;
+  font-style: normal;
+  font-family: Merriweather;
+  font-weight: 900px;
+  font-stretch: normal;
+}
+.heading24pxRegular {
+  font-size: 24px;
+  font-style: normal;
+  font-family: Merriweather;
+  font-weight: 400px;
+  font-stretch: normal;
+}
+.body20pxBold {
+  font-size: 20px;
+  font-style: normal;
+  font-family: Merriweather;
+  font-weight: 700px;
+  font-stretch: normal;
+}
+.body20pxMedium {
+  font-size: 20px;
+  font-style: normal;
+  font-family: Merriweather;
+  font-weight: 900px;
+  font-stretch: normal;
+}
+.body20pxRegular {
+  font-size: 20px;
+  font-style: normal;
+  font-family: Merriweather;
+  font-weight: 400px;
+  font-stretch: normal;
+}
+.body16pxBold {
+  font-size: 16px;
+  font-style: normal;
+  font-family: Merriweather;
+  font-weight: 700px;
+  font-stretch: normal;
+}
+.body16pxMedium {
+  font-size: 16px;
+  font-style: normal;
+  font-family: Merriweather;
+  font-weight: 900px;
+  font-stretch: normal;
+}
+.body16pxRegular {
+  font-size: 16px;
+  font-style: normal;
+  font-family: Merriweather;
+  font-weight: 400px;
+  font-stretch: normal;
+}
+.body14pxBold {
+  font-size: 14px;
+  font-style: normal;
+  font-family: Merriweather;
+  font-weight: 700px;
+  font-stretch: normal;
+}
+.body14pxMedium {
+  font-size: 14px;
+  font-style: normal;
+  font-family: Merriweather;
+  font-weight: 900px;
+  font-stretch: normal;
+}
+.body14pxRegular {
+  font-size: 14px;
+  font-style: normal;
+  font-family: Merriweather;
+  font-weight: 400px;
+  font-stretch: normal;
+}
+.body12pxBold {
+  font-size: 12px;
+  font-style: normal;
+  font-family: Merriweather;
+  font-weight: 700px;
+  font-stretch: normal;
+}
+.body12pxMedium {
+  font-size: 12px;
+  font-style: normal;
+  font-family: Merriweather;
+  font-weight: 900px;
+  font-stretch: normal;
+}
+.body12pxRegular {
+  font-size: 12px;
+  font-style: normal;
+  font-family: Merriweather;
+  font-weight: 400px;
+  font-stretch: normal;
+}
+.body10pxBold {
+  font-size: 10px;
+  font-style: normal;
+  font-family: Merriweather;
+  font-weight: 700px;
+  font-stretch: normal;
+}
+.body10pxMedium {
+  font-size: 10px;
+  font-style: normal;
+  font-family: Merriweather;
+  font-weight: 900px;
+  font-stretch: normal;
+}
+.body10pxRegular {
+  font-size: 10px;
+  font-style: normal;
+  font-family: Merriweather;
+  font-weight: 400px;
+  font-stretch: normal;
+}
+.body08pxBold {
+  font-size: 8px;
+  font-style: normal;
+  font-family: Merriweather;
+  font-weight: 700px;
+  font-stretch: normal;
+}
+.body08pxSemiBold {
+  font-size: 8px;
+  font-style: normal;
+  font-family: Merriweather;
+  font-weight: 900px;
+  font-stretch: normal;
+}
+.body08pxRegular {
+  font-size: 8px;
+  font-style: normal;
+  font-family: Merriweather;
+  font-weight: 400px;
+  font-stretch: normal;
+}
+.content {
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 1.15;
+  text-transform: none;
+  text-decoration: none;
+}
+

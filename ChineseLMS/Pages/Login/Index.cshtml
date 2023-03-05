@@ -1,0 +1,29 @@
+﻿@page
+@{
+    ViewData["Title"] = "登入";
+}
+
+<head>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="696236042234-7b51bt9t5m2sr6hitv1ph16ku27kdpve.apps.googleusercontent.com">
+</head>
+
+<div id="g_id_onload"
+     data-client_id="205996737136-cb8m06vlkhsj8qaa01k67qbj0l3ujt8h.apps.googleusercontent.com"
+     data-context="signin"
+     data-ux_mode="popup"
+     data-login_uri="/Login"
+     data-auto_prompt="false">
+</div>
+
+<div class="g_id_signin"
+     data-type="standard"
+     data-shape="rectangular"
+     data-theme="outline"
+     data-text="signin_with"
+     data-size="large"
+     data-logo_alignment="left">
+</div>
+
+
+<div class="g-signin2" data-onsuccess="onSignIn"></div>

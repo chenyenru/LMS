@@ -1,0 +1,111 @@
+@page
+@model ChineseLMS.Pages.SchoolAssignments.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="row">
+    <div class="col-4">
+        <div>
+            <partial name="~/Pages/Dashboard/_OptionsList_SchoolAssignment.cshtml" />
+        </div>
+        <div>
+            <partial name="~/Pages/Dashboard/_ClassList.cshtml" />
+        </div>
+    </div>
+    <div class="col-8">
+        <div class="list-group">
+            <div class="list-group-item shadow bg-white rounded">
+                <div class="row pl-1 mb-0 px-3">
+                    <div class="col-8 px-0">
+                        <a class="text-decoration-none" asp-page="./Index" style="color:#0078cd;"><strong>⬅️ See All Assignments</strong></a>
+                    </div>
+                    <div class="col-4 text-end">
+                        <a class="text-decoration-none danger" asp-page="./Delete" asp-route-id="@Model.SchoolAssignment?.ID"><strong>Delete ❌</strong></a>
+                        <a class="text-decoration-none" asp-page="./Edit" asp-route-id="@Model.SchoolAssignment?.ID"><strong>Edit ✍🏻</strong></a>
+                    </div>
+                </div>
+                <div class="list-group h-100 px-2 py-3">
+                    @*Header*@
+                    <div class="list-group-item shadow pl-3 mb-3 bg-white rounded">
+                        <div class="row pl-0 mb-1 px-0">
+                            <div class="col-8 font-weight-bold">
+                                <h3>
+                                    <strong>@Html.DisplayFor(model => model.SchoolAssignment.CourseID) @Html.DisplayFor(model => model.SchoolAssignment.Title)
+                                    </strong>
+                                </h3>
+                            </div>
+                            <div class="col-4 text-end">
+                                <h3 style="color:#07ae35;">
+                                    <strong>
+                                        @Html.DisplayFor(model => model.SchoolAssignment.TaskDueStartTime)
+                                    </strong>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    @*Details*@
+                    <div class="list-group-item shadow pl-3 mb-3 bg-white rounded h-50">
+                        <div class="row">
+                            <div class="col-8 font-weight-bold">
+                                <h5><strong>Task Details</strong></h5>
+                                <br />
+                                @Html.Raw(Model.SchoolAssignment.SchoolAssignmentDetails)
+                            </div>
+                        </div>
+                    </div>
+                    @*Tasks*@
+                    <div class="list-group-item shadow pl-3 mb-3 bg-white rounded">
+                        <div class="row">
+                            <div class="col-8 font-weight-bold">
+                                <h5><strong>Tasks</strong></h5>
+                                <br />
+                              
+                            @foreach (var todo in ViewBag.SpecificTodos)
+                                {
+                                <a class="shadow p-3 mb-3 bg-white rounded list-group-item list-group-item-action border-0">
+                                    <div class="row">
+                                        <div class="col-10 font-weight-bold">
+                                            <h7>
+                                                <strong>
+                                                    @todo.TodoName
+                                                </strong>
+                                            </h7>
+                                        </div>
+                                        <div class="col-2 text-end">
+                                            <label class="form-check-label">
+                                            <input class="form-check-input" onclick="return false;" type="checkbox" value="@todo.Checked" />
+                                        </div>
+                                    </div>
+                                </a>
+                                }
+                            </div>
+                        </div>
+                    </div>
+
+                    @*Dropbox*@
+                    <div class="list-group-item shadow pl-3 mb-3 bg-white rounded h-25">
+                        <div class="row">
+                            <div class="col-12 font-weight-bold">
+                                <h5><strong>Dropbox</strong></h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="my-3">
+                                <label for="formFile" class="form-label">
+                                </label>
+                                <input class="form-control" type="file" id="formFile">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

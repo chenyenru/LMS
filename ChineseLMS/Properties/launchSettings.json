@@ -1,0 +1,17 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true
+  },
+  "profiles": {
+    "ChineseLMS": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "SchoolAssignments",
+      "applicationUrl": "http://localhost:59497",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
